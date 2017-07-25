@@ -11,9 +11,76 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Alexa Energy App" startnode="1" creator="Twine" creator-version="2.1.3" ifid="5241FD20-7ED9-497A-9AFB-F9A348E65C11" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Alexa Energy App" startnode="1" creator="Twine" creator-version="2.1.3" ifid="5241FD20-7ED9-497A-9AFB-F9A348E65C11" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html,tw-story {
+  width: 100%;
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+  /* Vertical colour gradient */
+  background-image: linear-gradient(to bottom,  black, midnightblue);
+  background-image: -webkit-linear-gradient(top,  black, midnightblue);
+  background-attachment: fixed;
+
+  /* Fallback colour */
+  background-color: midnightblue;
+
+  /* Vertical centering */
+  height: 100%;
+  display: table;
+}
+body {
+  /* Remove default styles */
+  font-size: 100%;
+  background-color: transparent;
+  margin: 0;
+
+  /* Vertical centering */
+  height:100%;
+  display:table-cell;
+  vertical-align: middle;
+}
+#passages {
+  border-left: 0px;
+  margin: 0;
+  /* Keep a gap at the top and bottom of the page,
+      when the text is longer than the window's height. */
+  padding: 5% 0;
+}
+
+.passage {
+  /* Passage width */
+  width: 60%;
+  /* Horizontal centering */
+  margin: 0 auto;
+
+  /* Text formatting */
+  color: white;
+  font-size: 100%;
+  text-align:center;
+}
+
+/* No sidebar */
+#sidebar {
+  display:none;
+}
+
+/* Links */
+a {
+  color: cornflowerblue;
+}
+a:hover {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+/* Shrink the page when viewed on devices with a low screen width */
+@media screen and (max-width: 960px) {
+  .passage { font-size: 90%; width: 70%; }
+}
+@media screen and (max-width: 840px) {
+  .passage {  font-size: 87.5%; width: 80%; }
+}
+@media screen and (max-width: 720px) {
+  .passage { font-size: 75%; width: 90%; }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 </script><tw-passagedata pid="1" name="home" tags="" position="316,111">(set: $monthsAgo to -1)
 Your alexa app is in it&#x27;s default state and not saying or doing anything. 
